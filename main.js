@@ -14,8 +14,60 @@ function loadFooter() {
     });
 }
 
+// function cookiesAlert() {
+//   console.log("cookiess....");
+// }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cookiesAlert = document.getElementById("cookies-alert");
+  const acceptButton = document.getElementById("accept-cookies");
+  const declineButton = document.getElementById("decline-cookies");
+
+  function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  }
+
+  function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(";");
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == " ") c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  function checkCookie() {
+    const user = getCookie("userAcceptedCookies");
+    if (user != null) {
+      cookiesAlert.style.display = "none";
+    } else {
+      cookiesAlert.style.display = "flex";
+    }
+  }
+
+  acceptButton.addEventListener("click", function () {
+    setCookie("userAcceptedCookies", "true", 365);
+    console.log("User accepted cookies");
+    cookiesAlert.style.display = "none";
+  });
+
+  declineButton.addEventListener("click", function () {
+    setCookie("userAcceptedCookies", "false", 365);
+    console.log("User declined cookies");
+    cookiesAlert.style.display = "none";
+  });
+
+  checkCookie();
+});
+
 document.addEventListener("DOMContentLoaded", loadNav);
 document.addEventListener("DOMContentLoaded", loadFooter);
+// document.addEventListener("DOMContentLoaded", cookiesAlert);
 
 // Nav Controls
 const sideNav = document.getElementById("sidenav");

@@ -19,6 +19,39 @@
   <body
     class="min-h-screen bg-gradient-to-b from-white via-blue-50 tracking-tight text-black"
   >
+    <!-- Cookies Alert -->
+    <div
+      id="cookies-alert"
+      class="fixed bottom-10 z-10 flex w-full items-center justify-center"
+      data-aos="fade-up"
+      data-aos-delay="800"
+    >
+      <div
+        class="w-4/5 rounded-2xl border border-green-500/50 bg-white p-5 shadow-xl sm:w-[30rem]"
+      >
+        <p>
+          We use cookies to improve your experience. By using our site, you
+          agree to our <a href="#">cookie policy</a>.
+        </p>
+        <span class="flex gap-2 pt-3"
+          ><button
+            type="button"
+            id="accept-cookies"
+            class="rounded-xl bg-green-400 px-4 py-2 text-sm text-white duration-300 hover:rounded-lg hover:bg-green-500 md:text-base"
+          >
+            Accept
+          </button>
+          <button
+            id="decline-cookies"
+            type="button"
+            class="duration-300/10 flex items-center justify-center rounded-xl border border-slate-500 bg-slate-400/10 px-4 py-2 text-sm font-medium text-black duration-300 ease-in-out hover:rounded-lg hover:bg-slate-400/20 md:text-base"
+          >
+            Decline
+          </button></span
+        >
+      </div>
+    </div>
+
     <!-- Removed AOS from navbar -->
     <div id="navbar"></div>
 
@@ -448,12 +481,12 @@
               data-aos-delay="200"
             >
               We are proud to serve a
-              <span class="text-green-400">diverse</span> range of clients
+              <span class="text-green-500">diverse</span> range of clients
               across various industries. While we showcase many of our valued
               partners, some of our esteemed clients, particularly in
               confidential sectors, prefer to remain anonymous. Their trust in
               our solutions is a testament to our
-              <span class="text-green-400">quality and reliability.</span>
+              <span class="text-green-500">quality and reliability.</span>
             </p>
           </div>
         </section>
