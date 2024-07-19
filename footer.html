@@ -11,14 +11,14 @@
       class="w-4/5 text-center text-sm sm:text-base md:w-2/3 md:text-lg lg:w-1/2"
     >
       Get the latest news and updates on hardware and system
-      <br class="hidden sm:flex" />performance optimisations from PolySense
-      Solutions
+      <br class="hidden sm:flex" />performance optimisations from
+      <span class="font-semibold text-green-500">PolySense Solutions</span>.
     </p>
     <form
       id="newsletterForm"
       onsubmit="joinNewsletter(event)"
       action="submit"
-      class="relative flex w-[16rem] justify-between rounded-3xl border border-green-300/30 bg-white bg-none px-2 py-3 shadow-sm sm:w-[23rem] lg:w-[24.5rem]"
+      class="relative flex w-full max-w-[24.5rem] justify-between rounded-3xl border border-green-300/30 bg-white bg-none px-2 py-3 shadow-sm sm:w-[23rem] lg:w-[24.5rem]"
     >
       <input
         id="emailInput"
@@ -73,12 +73,61 @@
       >
     </div>
 
-    <ul class="flex w-60 flex-col items-start gap-8 px-6 text-lg sm:px-10">
+    <ul class="flex w-64 flex-col items-start gap-8 px-6 text-lg sm:px-10">
       <li class="duration-300 hover:text-green-500">
         <a href="/">Home</a>
       </li>
       <li class="duration-300 hover:text-green-500">
         <a href="/contact.html">Contact</a>
+      </li>
+      <li class="duration-300 hover:text-green-500">
+        <ul class="flex flex-wrap gap-3">
+          <li class="duration-300 hover:scale-105">
+            <a href="https://www.linkedin.com/company/polysense-solutions-inc/"
+              ><img
+                src="assets/footer/linkedin.png"
+                alt="linkedIn"
+                width="30"
+                height="30"
+            /></a>
+          </li>
+          <li class="duration-300 hover:scale-105">
+            <a href="https://www.instagram.com/"
+              ><img
+                src="assets/footer/instagram.png"
+                alt="instagram"
+                width="30"
+                height="30"
+            /></a>
+          </li>
+          <li class="duration-300 hover:scale-105">
+            <a href="https://facebook.com"
+              ><img
+                src="assets/footer/facebook.png"
+                alt="facebook"
+                width="30"
+                height="30"
+            /></a>
+          </li>
+          <li class="duration-300 hover:scale-105">
+            <a href="https://x.com"
+              ><img
+                src="assets/footer/twitter.png"
+                alt="X"
+                width="30"
+                height="30"
+            /></a>
+          </li>
+          <li class="duration-300 hover:scale-105">
+            <a href="/contact.html"
+              ><img
+                src="assets/footer/youtube.png"
+                alt="linkedIn"
+                width="30"
+                height="30"
+            /></a>
+          </li>
+        </ul>
       </li>
     </ul>
 
@@ -164,4 +213,7 @@
       </div>
     </div>
   </section>
+  <div class="w-full border-t px-6 py-4 text-center">
+    Copyright © 2024 PolySense Solutions Inc. All rights reserved.
+  </div>
 </body>
