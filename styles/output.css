@@ -1050,6 +1050,10 @@ video {
   height: 120vh;
 }
 
+.h-\[18rem\] {
+  height: 18rem;
+}
+
 .h-\[21rem\] {
   height: 21rem;
 }
@@ -1078,8 +1082,8 @@ video {
   height: 100%;
 }
 
-.h-\[18rem\] {
-  height: 18rem;
+.h-\[20rem\] {
+  height: 20rem;
 }
 
 .max-h-\[20rem\] {
@@ -2540,6 +2544,10 @@ video {
   background-color: rgb(255 255 255 / 0.05);
 }
 
+.bg-white\/50 {
+  background-color: rgb(255 255 255 / 0.5);
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -2705,6 +2713,10 @@ video {
 
 .to-green-50 {
   --tw-gradient-to: #f0fdf4 var(--tw-gradient-to-position);
+}
+
+.to-green-500 {
+  --tw-gradient-to: #22c55e var(--tw-gradient-to-position);
 }
 
 .to-green-500\/20 {
@@ -3752,10 +3764,6 @@ video {
   transition-duration: 500ms;
 }
 
-.duration-1000 {
-  transition-duration: 1000ms;
-}
-
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -3928,12 +3936,12 @@ video {
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-slate-400\/20:hover {
-  background-color: rgb(148 163 184 / 0.2);
-}
-
 .hover\:bg-slate-400\/15:hover {
   background-color: rgb(148 163 184 / 0.15);
+}
+
+.hover\:bg-slate-400\/20:hover {
+  background-color: rgb(148 163 184 / 0.2);
 }
 
 .hover\:font-bold:hover {
@@ -4109,6 +4117,11 @@ video {
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .sm\:text-4xl {
@@ -4317,6 +4330,10 @@ video {
     border-radius: 0.5rem;
   }
 
+  .md\:rounded-none {
+    border-radius: 0px;
+  }
+
   .md\:p-10 {
     padding: 2.5rem;
   }
@@ -4338,6 +4355,11 @@ video {
   .md\:px-\[5vw\] {
     padding-left: 5vw;
     padding-right: 5vw;
+  }
+
+  .md\:px-\[8\.5vw\] {
+    padding-left: 8.5vw;
+    padding-right: 8.5vw;
   }
 
   .md\:py-10 {
@@ -4430,6 +4452,11 @@ video {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
