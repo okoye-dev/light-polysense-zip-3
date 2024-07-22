@@ -274,106 +274,72 @@
     <!-- Content -->
 
     <div
-      class="mx-auto w-full overflow-hidden rounded-lg py-6 text-black shadow-emerald-950"
+      class="flex h-screen w-full items-center justify-center overflow-hidden rounded-lg py-6 text-black shadow-emerald-950"
     >
-      <div class="overflow-hidden bg-slate-400/20 pb-10 pt-24 lg:py-24">
-        <h1
-          class="px-6 text-4xl font-semibold sm:px-10 md:text-5xl lg:pt-14 lg:text-6xl"
-          data-aos="fade-down"
-        >
-          Login
-        </h1>
-      </div>
-
-      <form
-        id="contactForm"
-        class="flex flex-wrap justify-center gap-4 px-6 pb-10 md:pb-20 lg:px-20"
+      <div
+        class="absolute flex h-screen w-screen items-center justify-center bg-[#01061C]"
       >
-        <div data-aos="fade-down">
-          <label for="firstName" class="block text-sm font-medium text-black/80"
-            >First Name</label
-          >
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            class="mt-1 block w-full min-w-[19rem] rounded-md border border-green-500/50 bg-transparent px-4 py-2 shadow-sm sm:min-w-[23rem] lg:min-w-[24.5rem]"
-            required
-          />
-        </div>
-        <div data-aos="fade-down">
-          <label for="lastName" class="block text-sm font-medium text-black/80"
-            >Last Name</label
-          >
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            class="mt-1 block w-full min-w-[19rem] rounded-md border border-green-500/50 bg-transparent px-4 py-2 shadow-sm sm:min-w-[23rem] lg:min-w-[24.5rem]"
-            required
-          />
-        </div>
+        <img
+          src="assets/index/login.png"
+          alt="Sensor security"
+          class="absolute left-0 hidden h-screen object-cover lg:flex"
+        />
+      </div>
+      <form
+        id="loginForm"
+        class="mt-14 flex flex-col items-center justify-center gap-4 rounded-3xl border border-slate-500 bg-white/90 px-10 py-10 backdrop-blur-md sm:px-16 sm:py-20 lg:absolute lg:right-[10vw] lg:px-10 lg:py-10"
+      >
+        <h1 class="w-full text-start text-3xl font-bold" data-aos="fade-down">
+          User Login
+        </h1>
         <div data-aos="fade-down">
           <label
-            for="businessEmail"
-            class="block text-sm font-medium text-black/80"
-            >Business Email</label
-          >
-          <input
-            type="email"
-            id="businessEmail"
-            name="businessEmail"
-            class="mt-1 block w-full min-w-[19rem] rounded-md border border-green-500/50 bg-transparent px-4 py-2 shadow-sm sm:min-w-[23rem] lg:min-w-[24.5rem]"
-            required
-          />
-        </div>
-        <div data-aos="fade-down">
-          <label for="jobTitle" class="block text-sm font-medium text-black/80"
-            >Job Title</label
+            for="username"
+            class="block text-sm font-medium text-slate-900 sm:text-base"
+            >Username</label
           >
           <input
             type="text"
-            id="jobTitle"
-            name="jobTitle"
-            class="mt-1 block w-full min-w-[19rem] rounded-md border border-green-500/50 bg-transparent px-4 py-2 shadow-sm sm:min-w-[23rem] lg:min-w-[24.5rem]"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+            class="mt-1 block w-full min-w-[19rem] rounded-lg border border-black/50 bg-transparent px-4 py-2 shadow-sm placeholder:text-sm sm:min-w-[23rem] lg:min-w-[24.5rem]"
             required
           />
         </div>
-        <div data-aos="fade-down">
-          <label for="country" class="block text-sm font-medium text-black/80"
-            >Country/Region</label
+        <div data-aos="fade-down" class="relative">
+          <label
+            for="password"
+            class="block text-sm font-medium text-slate-900 sm:text-base"
+            >Password</label
           >
           <input
-            type="text"
-            id="country"
-            name="country"
-            class="mt-1 block w-full min-w-[19rem] rounded-md border border-green-500/50 bg-transparent px-4 py-2 shadow-sm sm:min-w-[23rem] lg:min-w-[24.5rem]"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+            class="mt-1 block w-full min-w-[19rem] rounded-lg border border-black/50 bg-transparent px-4 py-2 shadow-sm placeholder:text-sm sm:min-w-[23rem] lg:min-w-[24.5rem]"
             required
           />
+          <img
+            id="togglePasswordVisibility"
+            src="assets/index/hide.png"
+            alt="show/hide"
+            height="20"
+            width="20"
+            class="absolute right-2 top-[30px] h-8 w-8 cursor-pointer rounded-md p-2 duration-300 hover:bg-black/5"
+          />
         </div>
-        <div data-aos="fade-down">
-          <label for="message" class="block text-sm font-medium text-black/80"
-            >Got a custom message?</label
-          >
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            class="mt-1 block w-full min-w-[19rem] rounded-md border border-green-500/50 bg-transparent px-4 py-2 shadow-sm sm:min-w-[23rem] lg:min-w-[24.5rem]"
-            required
-          ></textarea>
-        </div>
-        <div class="flex w-full justify-center" data-aos="zoom-in">
+        <div class="flex w-full justify-center py-2" data-aos="zoom-in">
           <button
             type="submit"
-            class="w-40 rounded-md bg-green-600 px-4 py-2 font-semibold text-white shadow-sm duration-300 hover:bg-green-500"
+            class="w-40 rounded-xl bg-green-500 px-4 py-2 font-medium text-white shadow-sm duration-300 hover:bg-green-600"
           >
-            Submit
+            Login
           </button>
         </div>
       </form>
     </div>
-    <footer id="footer" data-aos="fade-up"></footer>
 
     <!-- js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

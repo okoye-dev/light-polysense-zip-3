@@ -6,18 +6,6 @@ function loadNav() {
     });
 }
 
-function loadFooter() {
-  fetch("footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("footer").innerHTML = data;
-    });
-}
-
-// function cookiesAlert() {
-//   console.log("cookiess....");
-// }
-
 document.addEventListener("DOMContentLoaded", function () {
   const cookiesAlert = document.getElementById("cookies-alert");
   const acceptButton = document.getElementById("accept-cookies");
@@ -44,30 +32,32 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkCookie() {
     const user = getCookie("userAcceptedCookies");
     if (user != null) {
-      cookiesAlert.style.display = "none";
+      cookiesAlert ? (cookiesAlert.style.display = "none") : null;
     } else {
-      cookiesAlert.style.display = "flex";
+      cookiesAlert ? (cookiesAlert.style.display = "flex") : null;
     }
   }
 
-  acceptButton.addEventListener("click", function () {
-    setCookie("userAcceptedCookies", "true", 365);
-    console.log("User accepted cookies");
-    cookiesAlert.style.display = "none";
-  });
+  if (acceptButton) {
+    acceptButton.addEventListener("click", function () {
+      setCookie("userAcceptedCookies", "true", 365);
+      console.log("User accepted cookies");
+      cookiesAlert.style.display = "none";
+    });
+  }
 
-  declineButton.addEventListener("click", function () {
-    setCookie("userAcceptedCookies", "false", 365);
-    console.log("User declined cookies");
-    cookiesAlert.style.display = "none";
-  });
+  if (declineButton) {
+    declineButton.addEventListener("click", function () {
+      setCookie("userAcceptedCookies", "false", 365);
+      console.log("User declined cookies");
+      cookiesAlert.style.display = "none";
+    });
+  }
 
   checkCookie();
 });
 
 document.addEventListener("DOMContentLoaded", loadNav);
-document.addEventListener("DOMContentLoaded", loadFooter);
-// document.addEventListener("DOMContentLoaded", cookiesAlert);
 
 // Nav Controls
 const sideNav = document.getElementById("sidenav");
@@ -109,19 +99,48 @@ function joinNewsletter(event) {
   document.getElementById("newsletterForm").reset();
 }
 
-// Request a demo form
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    const formData = {
-      firstName: document.getElementById("firstName").value,
-      lastName: document.getElementById("lastName").value,
-      businessEmail: document.getElementById("businessEmail").value,
-      jobTitle: document.getElementById("jobTitle").value,
-      country: document.getElementById("country").value,
-      message: document.getElementById("message").value,
-    };
-    console.log("Form Data:", formData);
-    document.getElementById("contactForm").reset();
-  });
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM fully loaded and parsed");
+
+  // Contact form
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const formData = {
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        businessEmail: document.getElementById("businessEmail").value,
+        jobTitle: document.getElementById("jobTitle").value,
+        country: document.getElementById("country").value,
+        message: document.getElementById("message").value,
+      };
+      console.log("Form Data:", formData);
+      contactForm.reset();
+    });
+  }
+
+  // Login Form
+  const loginForm = document.getElementById("loginForm");
+  if (loginForm) {
+    // Password toggle
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById("password");
+      const toggleButton = document.getElementById("togglePasswordVisibility");
+      passwordInput.type =
+        passwordInput.type === "password" ? "text" : "password";
+    }
+    const visibilityButton = document.getElementById(
+      "togglePasswordVisibility",
+    );
+    visibilityButton.addEventListener("click", togglePasswordVisibility);
+
+    // Login Form logging
+    loginForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      console.log({ username });
+      loginForm.reset();
+    });
+  }
+});
