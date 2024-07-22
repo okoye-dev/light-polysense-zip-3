@@ -5,6 +5,13 @@ function loadNav() {
       document.getElementById("navbar").innerHTML = data;
     });
 }
+function loadFooter() {
+  fetch("footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("footer").innerHTML = data;
+    });
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const cookiesAlert = document.getElementById("cookies-alert");
@@ -58,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", loadNav);
+document.addEventListener("DOMContentLoaded", loadFooter);
 
 // Nav Controls
 const sideNav = document.getElementById("sidenav");
@@ -126,7 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Password toggle
     function togglePasswordVisibility() {
       const passwordInput = document.getElementById("password");
-      const toggleButton = document.getElementById("togglePasswordVisibility");
       passwordInput.type =
         passwordInput.type === "password" ? "text" : "password";
     }
