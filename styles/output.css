@@ -2504,10 +2504,6 @@ video {
   border-color: rgb(100 116 139 / var(--tw-border-opacity));
 }
 
-.border-slate-700\/10 {
-  border-color: rgb(51 65 85 / 0.1);
-}
-
 .border-slate-700\/30 {
   border-color: rgb(51 65 85 / 0.3);
 }
