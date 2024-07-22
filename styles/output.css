@@ -1323,6 +1323,10 @@ video {
   max-width: 36rem;
 }
 
+.max-w-5xl {
+  max-width: 64rem;
+}
+
 .flex-shrink {
   flex-shrink: 1;
 }
@@ -1970,6 +1974,10 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-14 {
+  gap: 3.5rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -5046,6 +5054,10 @@ video {
 
   .lg\:pt-\[8vw\] {
     padding-top: 8vw;
+  }
+
+  .lg\:pb-12 {
+    padding-bottom: 3rem;
   }
 
   .lg\:text-2xl {
