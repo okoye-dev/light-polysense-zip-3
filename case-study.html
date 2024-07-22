@@ -10,6 +10,10 @@
       href="https://api.fontshare.com/v2/css?f[]=general-sans@500&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
   </head>
   <body
     class="min-h-screen bg-gradient-to-b from-blue-50 tracking-tight text-black"
@@ -269,26 +273,39 @@
 
     <!-- Content -->
     <div
-      class="flex flex-col items-center justify-center px-6 pb-20 pt-36 font-semibold sm:px-10 lg:flex-row lg:justify-between"
+      class="flex flex-col items-center justify-center overflow-hidden px-6 pb-20 pt-36 font-semibold sm:px-10 lg:flex-row lg:justify-between"
     >
-      <div class="lg:w-2/5">
-        <h1 class="w-3/4 text-2xl md:text-3xl lg:w-full lg:text-4xl">
+      <div class="overflow-hidden lg:w-2/5">
+        <h1
+          class="w-3/4 text-2xl md:text-3xl lg:w-full lg:text-4xl"
+          data-aos="fade-down"
+        >
           Significant Cost Reduction in Manufacturing
         </h1>
-        <h2 class="py-3 text-xl">The Power Of Energy Monitoring</h2>
+        <h2 class="py-3 text-xl" data-aos="fade-down" data-aos-delay="200">
+          The Power Of Energy Monitoring
+        </h2>
         <h3 class="flex flex-col">
-          <p class="w-fit rounded-lg border bg-slate-700/10 p-2">Funded By:</p>
+          <p
+            class="w-fit rounded-lg border bg-slate-500/10 p-2"
+            data-aos="fade-down"
+            data-aos-delay="300"
+          >
+            Funded By:
+          </p>
           <img
             src="assets/index/partner7.png"
             alt="Efficiency Manitoba"
             width="300"
             height="300"
+            data-aos="zoom-out"
           />
         </h3>
       </div>
-      <div class="flex flex-col gap-4 py-10 lg:pr-20">
+      <div class="flex flex-col gap-4 overflow-hidden py-10 lg:pr-20">
         <span
           class="flex h-28 max-w-md items-center overflow-hidden rounded-2xl border border-slate-700/30 bg-green-50/70"
+          data-aos="fade-left"
           ><h1
             class="flex h-full items-center justify-center border-r bg-white px-6 text-5xl text-green-500 sm:p-6"
           >
@@ -304,6 +321,8 @@
         >
         <span
           class="flex h-28 max-w-md items-center overflow-hidden rounded-2xl border border-slate-700/30 bg-green-50/70"
+          data-aos="fade-left"
+          data-aos-delay="300"
           ><h1
             class="flex h-full items-center justify-center border-r bg-white px-6 text-5xl text-green-500 sm:p-6"
           >
@@ -313,7 +332,9 @@
           <div class="px-6">Estimated Maintenance Savings</div></span
         >
         <span
-          class="flex h-28 max-w-md items-center overflow-hidden rounded-2xl border border-slate-700/10 bg-green-50/70"
+          class="flex h-28 max-w-md items-center overflow-hidden rounded-2xl border border-slate-700/30 bg-green-50/70"
+          data-aos="fade-left"
+          data-aos-delay="600"
           ><h1
             class="flex h-full items-center justify-center border-r bg-white px-6 text-4xl text-green-500 sm:p-6"
           >
@@ -325,14 +346,22 @@
       </div>
     </div>
 
-    <span class="flex h-[2px] w-full bg-slate-700/10"></span>
+    <span class="flex h-[2px] w-full bg-slate-500/10"></span>
     <!-- Section 2 -->
-    <section class="sm-px-10 flex w-full justify-center px-6 py-20">
+    <section
+      class="sm-px-10 flex w-full justify-center overflow-hidden px-6 py-20"
+    >
       <div class="flex max-w-3xl flex-col gap-4">
-        <h1 class="py-3 text-3xl font-semibold lg:text-4xl">
+        <h1
+          class="py-3 text-3xl font-semibold lg:text-4xl"
+          data-aos="fade-down"
+        >
           Energy Utilization Monitoring
         </h1>
-        <p class="rounded-2xl border bg-slate-700/10 p-6 font-normal">
+        <p
+          class="rounded-2xl border bg-slate-500/10 p-6 font-normal"
+          data-aos="zoom-out"
+        >
           In this case study,
           <span class="text-green-500">PolySense Solutions</span> used its
           proprietary
@@ -340,7 +369,7 @@
           technologies to monitor energy usage and utilization of 24 machines at
           a small manufacturing facility in Winnipeg, Manitoba.
         </p>
-        <p class="font-normal">
+        <p class="font-normal" data-aos="fade-up" data-aos-delay="300">
           Over the first two months of monitoring, PolySense was able to
           identify potential energy savings of $8500 annually, which represents
           a substantial 28% reduction in their current annual electricity
@@ -368,11 +397,14 @@
       </div>
     </section>
 
-    <span class="flex h-[2px] w-full bg-slate-700/10"></span>
+    <span class="flex h-[2px] w-full bg-slate-500/10"></span>
 
     <!-- Section 3 -->
     <section class="px-6 py-20 sm:px-10">
-      <h1 class="w-full pb-8 text-center text-3xl font-semibold md:text-4xl">
+      <h1
+        class="w-full pb-8 text-center text-3xl font-semibold md:text-4xl"
+        data-aos="fade-down"
+      >
         Sensor Equipments Utilized
       </h1>
       <!-- amp -->
@@ -382,6 +414,7 @@
         <div class="md:w-4/5 lg:w-2/5">
           <h1
             class="w-3/4 text-2xl font-semibold text-green-500 md:text-3xl lg:w-full lg:text-4xl"
+            data-aos="fade-down"
           >
             PolySense AMP
           </h1>
@@ -452,7 +485,7 @@
       </div>
     </section>
 
-    <span class="flex h-[2px] w-full bg-slate-700/10"></span>
+    <span class="flex h-[2px] w-full bg-slate-500/10"></span>
 
     <!-- Section 4 -->
     <section class="px-6 py-20 sm:px-10">
@@ -646,7 +679,7 @@
       </div>
     </section>
 
-    <span class="flex h-[2px] w-full bg-slate-700/10"></span>
+    <span class="flex h-[2px] w-full bg-slate-500/10"></span>
 
     <!-- Section 5 -->
     <section class="px-6 py-20 sm:px-10">
@@ -767,20 +800,28 @@
       </div>
     </section>
 
-    <span class="flex h-[2px] w-full bg-slate-700/10"></span>
+    <span class="flex h-[2px] w-full bg-slate-500/10"></span>
 
     <!-- Section 6 -->
     <section class="sm-px-10 flex w-full justify-center px-6 py-20">
-      <div class="flex max-w-3xl flex-col gap-4">
-        <h1 class="py-3 text-3xl font-semibold lg:text-4xl">Major Results</h1>
-        <p class="rounded-2xl border bg-slate-700/10 p-6 font-normal">
+      <div class="flex max-w-3xl flex-col gap-4 overflow-hidden">
+        <h1
+          class="py-3 text-3xl font-semibold lg:text-4xl"
+          data-aos="fade-down "
+        >
+          Major Results
+        </h1>
+        <p
+          class="rounded-2xl border bg-slate-500/10 p-6 font-normal"
+          data-aos="zoom-out"
+        >
           Reducing the duty cycle of both the air compressor and the Wire EDM
           unit from 100% to 30% for the remainder of their lifespan offers
           substantial economic advantages. By modifying the duty cycle, we
           extend the useful life of these units, thereby optimizing the return
           on the initial investment.
         </p>
-        <div class="font-normal">
+        <div class="font-normal" data-aos="fade-up" data-aos-delay="200">
           Furthermore, this adjustment results in reduced annual maintenance
           costs. Under the previous duty cycle, the maintenance cost would have
           been around 1% of the initial equipment cost per year. By lowering the
@@ -925,7 +966,10 @@
               </div>
             </div>
           </div>
-          <p class="mt-4 rounded-2xl border bg-slate-700/5 p-6 font-normal">
+          <p
+            class="mt-4 rounded-2xl border bg-slate-700/5 p-6 font-normal"
+            data-aos="fade-down"
+          >
             The ultrasonic leak detector helped us find the leaks in a noisy
             manufacturing shop environment. Once close, we could hear the leaks
             with our ears, and in some cases feel them with our hands. The leaks
@@ -936,14 +980,17 @@
       </div>
     </section>
 
-    <span class="flex h-[2px] w-full bg-slate-700/10"></span>
+    <span class="flex h-[2px] w-full bg-slate-700/5"></span>
     <!-- Section 7 -->
     <section class="sm-px-10 flex w-full justify-center px-6 py-20">
       <div class="flex max-w-3xl flex-col gap-4">
-        <h1 class="w-full py-3 text-start text-3xl font-semibold lg:text-4xl">
+        <h1
+          class="w-full py-3 text-start text-3xl font-semibold lg:text-4xl"
+          data-aos="fade-down"
+        >
           Conclusion
         </h1>
-        <p>
+        <p data-aos="fade-down" data-aos-delay="100">
           In conclusion PolySense Solutions, employing its advanced AMP/BOLT
           technologies, illustrated significant potential for energy savings in
           the manufacturing industry. Our intervention at this manufacturing
@@ -972,7 +1019,14 @@
       </div>
     </section>
     <!-- footer -->
-    <footer id="footer"></footer>
+    <footer id="footer" data-aos="fade-up"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Animation occurs only once
+      });
+    </script>
     <script src="main.js"></script>
   </body>
 </html>
